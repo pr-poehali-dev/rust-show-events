@@ -27,8 +27,8 @@ const ContactsSection = () => {
   return (
     <section id="contacts" className="py-32 relative" ref={sectionRef}>
       <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-rust-red/5 rounded-full blur-[150px]" />
-        <div className="absolute top-0 right-1/4 w-64 h-64 bg-rust-teal/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[hsl(0,85%,55%)]/5 rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-1/4 w-64 h-64 bg-[hsl(190,100%,50%)]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -63,20 +63,20 @@ const ContactsSection = () => {
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-rust-green transition-colors duration-500" style={{ clipPath: "polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%)" }}>
-                  <Icon name="Mail" size={18} className="text-white/40 group-hover:text-rust-green transition-colors duration-500" />
+                <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-rust-lime transition-colors duration-500" style={{ clipPath: "polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%)" }}>
+                  <Icon name="Mail" size={18} className="text-white/40 group-hover:text-rust-lime transition-colors duration-500" />
                 </div>
                 <div>
                   <div className="font-body text-xs text-white/30 uppercase tracking-wider mb-1">Email</div>
-                  <a href="mailto:hello@rustshow.ru" className="font-heading text-xl text-white hover:text-rust-green transition-colors duration-300">
+                  <a href="mailto:hello@rustshow.ru" className="font-heading text-xl text-white hover:text-rust-lime transition-colors duration-300">
                     hello@rustshow.ru
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-rust-teal transition-colors duration-500" style={{ clipPath: "polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%)" }}>
-                  <Icon name="MapPin" size={18} className="text-white/40 group-hover:text-rust-teal transition-colors duration-500" />
+                <div className="w-12 h-12 border border-white/10 flex items-center justify-center group-hover:border-rust-cyan transition-colors duration-500" style={{ clipPath: "polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%)" }}>
+                  <Icon name="MapPin" size={18} className="text-white/40 group-hover:text-rust-cyan transition-colors duration-500" />
                 </div>
                 <div>
                   <div className="font-body text-xs text-white/30 uppercase tracking-wider mb-1">Адрес</div>

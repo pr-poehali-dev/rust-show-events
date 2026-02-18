@@ -12,13 +12,13 @@ const projects = [
     title: "TECH SUMMIT",
     category: "Конференция",
     tags: ["Техника", "Медиа"],
-    color: "145, 70%, 45%",
+    color: "83, 100%, 68%",
   },
   {
     title: "BRAND LAUNCH",
     category: "Презентация",
     tags: ["РПГ", "Медиа"],
-    color: "175, 75%, 45%",
+    color: "190, 100%, 50%",
   },
   {
     title: "CITY FEST",
@@ -30,15 +30,21 @@ const projects = [
     title: "AWARDS CEREMONY",
     category: "Церемония награждения",
     tags: ["РПГ", "Техника"],
-    color: "175, 75%, 45%",
+    color: "190, 100%, 50%",
   },
   {
     title: "PRODUCT SHOW",
     category: "Продуктовое шоу",
     tags: ["Техника", "Медиа"],
-    color: "145, 70%, 45%",
+    color: "83, 100%, 68%",
   },
 ];
+
+const tagColors: Record<string, string> = {
+  "Техника": "0, 85%, 55%",
+  "РПГ": "190, 100%, 50%",
+  "Медиа": "83, 100%, 68%",
+};
 
 const PortfolioSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -118,7 +124,11 @@ const PortfolioSection = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-body px-3 py-1 border border-white/10 text-white/40 uppercase tracking-wider"
+                      className="text-xs font-body px-3 py-1 border uppercase tracking-wider"
+                      style={{
+                        borderColor: `hsl(${tagColors[tag]} / 0.3)`,
+                        color: `hsl(${tagColors[tag]})`,
+                      }}
                     >
                       {tag}
                     </span>

@@ -1,11 +1,11 @@
+import Logo from "@/components/Logo";
+
 const Footer = () => {
   return (
     <footer className="border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="font-heading text-xl font-bold tracking-wider text-white">
-            RUST<span className="text-rust-red"> SHOW</span>
-          </div>
+          <Logo size="sm" />
 
           <div className="flex items-center gap-8">
             {["О нас", "Услуги", "Портфолио", "Контакты"].map((link) => (
@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
 
           <div className="font-body text-xs text-white/20">
-            © 2025 RUST SHOW
+            © 2025 RUST*SHOW
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
+import Logo from "@/components/Logo";
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -22,13 +23,13 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-rust-red/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-rust-teal/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-rust-green/8 rounded-full blur-[100px]" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[hsl(0,85%,55%)]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[hsl(190,100%,50%)]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[hsl(83,100%,68%)]/8 rounded-full blur-[100px]" />
 
         <div className="absolute top-1/4 right-1/4 w-px h-40 bg-gradient-to-b from-transparent via-white/10 to-transparent rotate-45" />
-        <div className="absolute bottom-1/3 left-1/3 w-px h-60 bg-gradient-to-b from-transparent via-rust-red/20 to-transparent -rotate-12" />
-        <div className="absolute top-1/3 left-1/5 w-32 h-px bg-gradient-to-r from-transparent via-rust-teal/15 to-transparent rotate-45" />
+        <div className="absolute bottom-1/3 left-1/3 w-px h-60 bg-gradient-to-b from-transparent via-[hsl(0,85%,55%)]/20 to-transparent -rotate-12" />
+        <div className="absolute top-1/3 left-[20%] w-32 h-px bg-gradient-to-r from-transparent via-[hsl(190,100%,50%)]/15 to-transparent rotate-45" />
       </div>
 
       <div
@@ -42,15 +43,17 @@ const HeroSection = () => {
           </span>
         </div>
 
-        <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] mb-6 tracking-tight">
-          <span className="text-white">RUST</span>
-          <br />
-          <span className="relative">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(0,85%,55%)] via-[hsl(145,70%,45%)] to-[hsl(175,75%,45%)]">
-              SHOW
-            </span>
-          </span>
-        </h1>
+        <div className="flex justify-center mb-8">
+          <Logo size="xl" />
+        </div>
+
+        <div className="flex justify-center gap-6 mb-6">
+          <span className="text-xs font-body uppercase tracking-[0.2em] text-rust-red">Техника</span>
+          <span className="text-white/20">|</span>
+          <span className="text-xs font-body uppercase tracking-[0.2em] text-rust-cyan">Режиссура</span>
+          <span className="text-white/20">|</span>
+          <span className="text-xs font-body uppercase tracking-[0.2em] text-rust-lime">Медиа</span>
+        </div>
 
         <p className="font-body text-lg md:text-xl text-white/40 max-w-xl mx-auto mb-12 leading-relaxed">
           Мы не продаём услуги —<br />

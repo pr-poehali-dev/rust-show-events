@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,9 +28,9 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-heading text-2xl font-bold tracking-wider text-white">
-          RUST<span className="text-rust-red"> SHOW</span>
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <a href="#">
+          <Logo size="sm" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

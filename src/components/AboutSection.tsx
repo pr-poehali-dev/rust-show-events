@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 200, suffix: "+", label: "Мероприятий" },
-  { value: 8, suffix: " лет", label: "На рынке" },
-  { value: 50, suffix: "+", label: "Специалистов" },
-  { value: 3, suffix: "", label: "Направления" },
+  { value: 200, suffix: "+", label: "Мероприятий", color: "0, 85%, 55%" },
+  { value: 8, suffix: " лет", label: "На рынке", color: "190, 100%, 50%" },
+  { value: 50, suffix: "+", label: "Специалистов", color: "83, 100%, 68%" },
+  { value: 3, suffix: "", label: "Направления", color: "0, 85%, 55%" },
 ];
 
 const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
@@ -84,7 +84,7 @@ const AboutSection = () => {
 
             <div data-animate className="opacity-0">
               <p className="font-body text-white/50 text-lg leading-relaxed mb-6">
-                RUST SHOW — это не просто event-агентство. Это команда, которая 
+                RUST*SHOW — это не просто event-агентство. Это команда, которая 
                 превращает идеи в живые эмоции. Каждое мероприятие — это история, 
                 которую мы рассказываем вместе с вами.
               </p>
@@ -108,8 +108,16 @@ const AboutSection = () => {
                       : "polygon(0 5%, 100% 0, 100% 95%, 0 100%)"
                   }}
                 >
-                  <div className="font-heading text-4xl md:text-5xl font-bold text-white group-hover:text-rust-red transition-colors duration-500">
-                    <CountUp target={stat.value} suffix={stat.suffix} />
+                  <div
+                    className="font-heading text-4xl md:text-5xl font-bold text-white transition-colors duration-500"
+                    style={{ color: undefined }}
+                  >
+                    <span className="group-hover:hidden">
+                      <CountUp target={stat.value} suffix={stat.suffix} />
+                    </span>
+                    <span className="hidden group-hover:inline" style={{ color: `hsl(${stat.color})` }}>
+                      <CountUp target={stat.value} suffix={stat.suffix} />
+                    </span>
                   </div>
                   <div className="font-body text-sm text-white/30 mt-2 uppercase tracking-wider">
                     {stat.label}

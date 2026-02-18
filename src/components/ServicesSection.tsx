@@ -3,23 +3,6 @@ import Icon from "@/components/ui/icon";
 
 const services = [
   {
-    id: "rpg",
-    title: "Режиссёрско-постановочная группа",
-    shortTitle: "РПГ",
-    color: "rust-teal",
-    colorHsl: "175, 75%, 45%",
-    icon: "Clapperboard",
-    image: "https://cdn.poehali.dev/projects/3473381b-b539-426b-ad29-bc7c1cb2b70f/files/73bfbcaa-9107-4a19-b1f2-52a2b1e41d0c.jpg",
-    items: [
-      "Разработка сценария",
-      "Подбор артистов",
-      "Режиссура мероприятия",
-      "Группа сопровождения сцены",
-      "Хореография и постановка",
-    ],
-    description: "Каждый сценарий — это история. Мы выстраиваем драматургию вашего события от первой до последней минуты.",
-  },
-  {
     id: "tech",
     title: "Техническое обеспечение",
     shortTitle: "ТЕХНИКА",
@@ -37,11 +20,28 @@ const services = [
     description: "Технологии, которые создают атмосферу. Сцена, звук и свет — фундамент незабываемого события.",
   },
   {
+    id: "rpg",
+    title: "Режиссёрско-постановочная группа",
+    shortTitle: "РПГ",
+    color: "rust-cyan",
+    colorHsl: "190, 100%, 50%",
+    icon: "Clapperboard",
+    image: "https://cdn.poehali.dev/projects/3473381b-b539-426b-ad29-bc7c1cb2b70f/files/73bfbcaa-9107-4a19-b1f2-52a2b1e41d0c.jpg",
+    items: [
+      "Разработка сценария",
+      "Подбор артистов",
+      "Режиссура мероприятия",
+      "Группа сопровождения сцены",
+      "Хореография и постановка",
+    ],
+    description: "Каждый сценарий — это история. Мы выстраиваем драматургию вашего события от первой до последней минуты.",
+  },
+  {
     id: "media",
     title: "Медиа-сопровождение",
     shortTitle: "МЕДИА",
-    color: "rust-green",
-    colorHsl: "145, 70%, 45%",
+    color: "rust-lime",
+    colorHsl: "83, 100%, 68%",
     icon: "Video",
     image: "https://cdn.poehali.dev/projects/3473381b-b539-426b-ad29-bc7c1cb2b70f/files/8fbbabeb-4797-41de-ba19-135d9f9e9703.jpg",
     items: [
@@ -123,7 +123,7 @@ const ServicesSection = () => {
                   <Icon
                     name={service.icon}
                     size={20}
-                    className={activeIndex === i ? "text-white" : "text-white/40"}
+                    className={activeIndex === i ? (service.id === "media" ? "text-black" : "text-white") : "text-white/40"}
                   />
                 </div>
                 <div>
